@@ -218,8 +218,8 @@
       if (!paused){
         pos += direction * speedPxPerSec * dt;
         var half = el.scrollWidth / 2;
-        if (direction === 1 && pos <= -half) pos += half;
-        if (direction === -1 && pos >= 0) pos -= half;
+        if (direction === 1 && pos >= 0) pos -= half;
+        if (direction === -1 && pos <= -half) pos += half;
       }
       el.style.transform = 'translateX(' + pos + 'px)';
       requestAnimationFrame(frame);
